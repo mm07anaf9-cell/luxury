@@ -24,7 +24,13 @@
   }
   applyTheme(start);
 
-  // Scroll reveal
+  // Scroll reveal (progressive enhancement: content is visible unless this script runs)
+  root.classList.add("anim");
+  setTimeout(function () {
+    document.querySelectorAll(".reveal:not(.in)").forEach(function (e) {
+      if (e.getBoundingClientRect().top < window.innerHeight * 1.1) e.classList.add("in");
+    });
+  }, 1200);
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   window.LM_reveal = function (scope) {
     var els = (scope || document).querySelectorAll(".reveal:not(.in)");
