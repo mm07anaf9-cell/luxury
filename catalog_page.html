@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Luxury Motors - Catalog</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="banner">SHOWCASE DEMO - forms are not connected to anything</div>
+<nav id="nav"></nav>
+<div class="page"><h1>Catalog</h1><p>Sample listings to show how the showroom works. Not real inventory. Photos show similar cars and are credited on the <a href="credits.html" style="color:#000">credits page</a>.</p>
+<div class="filters"><select id="f-make" aria-label="Make"><option value="">All makes</option></select>
+<select id="f-body" aria-label="Body"><option value="">All body types</option><option>Coupe</option><option>Sedan</option><option>SUV</option></select>
+<select id="f-max" aria-label="Max price"><option value="">Any price</option><option value="100000">Up to $100,000</option><option value="150000">Up to $150,000</option><option value="250000">Up to $250,000</option></select>
+<select id="f-sort" aria-label="Sort"><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
+<p id="count"></p><div id="grid"></div></div>
+<div id="detail" class="modal" role="dialog" aria-modal="true" aria-labelledby="d-title"><div class="box"><div id="d-art" class="thumb"></div><h2 id="d-title"></h2><p id="d-body"></p><button id="d-close" class="btn small" type="button">Close</button></div></div>
+<script src="app.js"></script>
+</body></html>
